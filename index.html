@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WIUT Hackathon 2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+.hero {
+    background: #111827;
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+}
+
+.card p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.bar {
+    margin: 20px 0;
+}
+
+.bar-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.bar-bg {
+    height: 24px;
+    background: #e5e7eb;
+    border-radius: 20px;
+}
+
+.bar-fill {
+    height: 24px;
+    background: #111827;
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+}
+
+@media(max-width: 800px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+<h1>Financial Signal Monitoring</h1>
+
+<p>
+WIUT Hackathon 2026 — Exploratory Data Analysis and Machine Learning
+approach for predicting escalation probability of financial monitoring signals.
+</p>
+</div>
+
+
+<div class="section">
+
+<h2>Project Overview</h2>
+
+<p>
+The objective of this project is to estimate the probability that a financial
+monitoring signal will be escalated.
+</p>
+
+<p>
+The target variable is <b>eskalatsiya</b>: 1 represents an escalated signal,
+while 0 represents a dismissed signal.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Dataset Overview</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>14,000</h3>
+<p>Training signals</p>
+</div>
+
+<div class="card">
+<h3>6,000</h3>
+<p>Test signals</p>
+</div>
+
+<div class="card">
+<h3>6.99M</h3>
+<p>Training transactions</p>
+</div>
+
+<div class="card">
+<h3>3.03M</h3>
+<p>Test transactions</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Target Distribution</h2>
+
+<p>
+The training dataset contains 11,595 dismissed signals and 2,405 escalated
+signals.
+</p>
+
+<div class="bar">
+
+<div class="bar-title">
+<span>Dismissed (0)</span>
+<b>82.82%</b>
+</div>
+
+<div class="bar-bg">
+<div class="bar-fill" style="width:82.82%"></div>
+</div>
+
+</div>
+
+<div class="bar">
+
+<div class="bar-title">
+<span>Escalated (1)</span>
+<b>17.18%</b>
+</div>
+
+<div class="bar-bg">
+<div class="bar-fill" style="width:17.18%"></div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Monthly Escalation Rate</h2>
+
+<table>
+
+<tr>
+<th>Year</th>
+<th>Escalation Rate</th>
+</tr>
+
+<tr>
+<td>2025</td>
+<td>16.70%</td>
+</tr>
+
+<tr>
+<td>2026</td>
+<td>17.75%</td>
+</tr>
+
+<tr>
+<td>April 2025</td>
+<td>20.00%</td>
+</tr>
+
+<tr>
+<td>April 2026</td>
+<td>21.22%</td>
+</tr>
+
+</table>
+
+<p>
+The monthly analysis shows variation in escalation rates across the observed
+period.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Transaction Flow</h2>
+
+<div class="bar">
+
+<div class="bar-title">
+<span>Kirim</span>
+<b>17.16%</b>
+</div>
+
+<div class="bar-bg">
+<div class="bar-fill" style="width:17.16%"></div>
+</div>
+
+</div>
+
+<div class="bar">
+
+<div class="bar-title">
+<span>Chiqim</span>
+<b>17.37%</b>
+</div>
+<div class="bar-bg">
+<div class="bar-fill" style="width:17.37%"></div>
+</div>
+
+</div>
+
+<p>
+The two transaction directions have relatively similar escalation rates.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Transaction Type</h2>
+
+<table>
+
+<tr>
+<th>Transaction Type</th>
+<th>Escalation Rate</th>
+</tr>
+
+<tr>
+<td>Karta</td>
+<td>16.80%</td>
+</tr>
+
+<tr>
+<td>Bank o'tkazmasi</td>
+<td>17.68%</td>
+</tr>
+
+<tr>
+<td>Naqd</td>
+<td>17.84%</td>
+</tr>
+
+<tr>
+<td>Xalqaro</td>
+<td>18.90%</td>
+</tr>
+
+</table>
+
+<p>
+The international category has fewer observations and should therefore be
+interpreted cautiously.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Feature Engineering</h2>
+
+<ul>
+<li>Transaction count</li>
+<li>Average, minimum and maximum amount index</li>
+<li>Standard deviation of amount index</li>
+<li>Incoming and outgoing transaction ratios</li>
+<li>Transaction type ratios</li>
+<li>Night-time transaction ratio</li>
+<li>Number of unique transaction days</li>
+<li>Weekend transaction ratio</li>
+<li>25th percentile of amount index</li>
+<li>Amount range</li>
+<li>Hourly and calendar features</li>
+</ul>
+
+</div>
+
+
+<div class="section">
+
+<h2>Machine Learning Approach</h2>
+
+<p>
+A LightGBM classifier was used to estimate escalation probabilities.
+The main evaluation metric was ROC-AUC.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>LightGBM</h3>
+<p>Final model</p>
+</div>
+
+<div class="card">
+<h3>20</h3>
+<p>Final features</p>
+</div>
+
+<div class="card">
+<h3>0.6037</h3>
+<p>Validation ROC-AUC</p>
+</div>
+
+<div class="card">
+<h3>6,000</h3>
+<p>Test predictions</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Conclusion</h2>
+
+<p>
+The exploratory analysis identified variation across time, transaction
+characteristics and behavioral features.
+</p>
+
+<p>
+Transaction-level aggregation provides a richer representation of each
+financial signal.
+</p>
+
+<p>
+The final model produces an escalation probability for every test signal.
+</p>
+
+</div>
+
+
+<div class="footer">
+WIUT Hackathon 2026 — Financial Signal Monitoring
+</div>
+
+</div>
+
+</body>
+</html>
